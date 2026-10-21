@@ -1,0 +1,322 @@
+[
+  {
+    "order": 1,
+    "nameEn": "Bed-Troly",
+    "nameGu": "બેડ ટ્રોલી",
+    "unit": "NOS",
+    "defaultRate": 1500,
+    "isActive": true
+  },
+  {
+    "order": 2,
+    "nameEn": "Ceiling",
+    "nameGu": "સીલિંગ",
+    "unit": "SQ.FT",
+    "defaultRate": 210,
+    "isActive": true
+  },
+  {
+    "order": 3,
+    "nameEn": "Ceiling (RF)",
+    "nameGu": "સીલિંગ (R.F)",
+    "unit": "R.F",
+    "defaultRate": 210,
+    "isActive": true
+  },
+  {
+    "order": 4,
+    "nameEn": "Ceiling Store-Frame Work",
+    "nameGu": "સીલિંગ સ્ટોર - ફ્રેમ વર્ક",
+    "unit": "SQ.FT",
+    "defaultRate": 200,
+    "isActive": true
+  },
+  {
+    "order": 5,
+    "nameEn": "Counsil Door Closer",
+    "nameGu": "કન્સીલ્ડ ડોર ક્લોઝર",
+    "unit": "NOS",
+    "defaultRate": 1125,
+    "isActive": true
+  },
+  {
+    "order": 6,
+    "nameEn": "Cupboard - Glss Troly – Full Size",
+    "nameGu": "કબાટ ગ્લાસ ટ્રોલી ફૂલ સાઇઝ",
+    "unit": "NOS",
+    "defaultRate": 750,
+    "isActive": true
+  },
+  {
+    "order": 7,
+    "nameEn": "Cupboard - Laminate/Lacquer",
+    "nameGu": "કબાટ - લેમિનેટ / લેકર",
+    "unit": "SQ.FT",
+    "defaultRate": 225,
+    "isActive": true
+  },
+  {
+    "order": 8,
+    "nameEn": "Cupboard Belt",
+    "nameGu": "કબાટ પટ્ટી",
+    "unit": "SQ.FT",
+    "defaultRate": 195,
+    "isActive": true
+  },
+  {
+    "order": 9,
+    "nameEn": "Cupboard Belt (RF)",
+    "nameGu": "કબાટ પટ્ટી (R.F)",
+    "unit": "R.F",
+    "defaultRate": 195,
+    "isActive": true
+  },
+  {
+    "order": 10,
+    "nameEn": "Cupboard Veneer",
+    "nameGu": "કબાટ વિનિયર",
+    "unit": "SQ.FT",
+    "defaultRate": 260,
+    "isActive": true
+  },
+  {
+    "order": 11,
+    "nameEn": "Door",
+    "nameGu": "દરવાજા",
+    "unit": "SQ.FT",
+    "defaultRate": 190,
+    "isActive": true
+  },
+  {
+    "order": 12,
+    "nameEn": "Door Kopra (RF)",
+    "nameGu": "બારણાં કોપરા (R.F)",
+    "unit": "R.F",
+    "defaultRate": 200,
+    "isActive": true
+  },
+  {
+    "order": 13,
+    "nameEn": "Door Kopra Penelling",
+    "nameGu": "બારણાં કોપરા પેનલિંગ",
+    "unit": "SQ.FT",
+    "defaultRate": 200,
+    "isActive": true
+  },
+  {
+    "order": 14,
+    "nameEn": "Door Lock – Roje Lock",
+    "nameGu": "ડોર લોક - રોઝ લોક",
+    "unit": "NOS",
+    "defaultRate": 750,
+    "isActive": true
+  },
+  {
+    "order": 15,
+    "nameEn": "Door Lock – Round Lock",
+    "nameGu": "ડોર લોક - રાઉન્ડ લોક",
+    "unit": "NOS",
+    "defaultRate": 475,
+    "isActive": true
+  },
+  {
+    "order": 16,
+    "nameEn": "Double Bed",
+    "nameGu": "ડબલ બેડ",
+    "unit": "SQ.FT",
+    "defaultRate": 205,
+    "isActive": true
+  },
+  {
+    "order": 17,
+    "nameEn": "Drawer",
+    "nameGu": "ડ્રોઅર",
+    "unit": "NOS",
+    "defaultRate": 500,
+    "isActive": true
+  },
+  {
+    "order": 18,
+    "nameEn": "Dressing Table",
+    "nameGu": "ડ્રેસિંગ ટેબલ",
+    "unit": "SQ.FT",
+    "defaultRate": 230,
+    "isActive": true
+  },
+  {
+    "order": 19,
+    "nameEn": "Headboard",
+    "nameGu": "હેડબોર્ડ",
+    "unit": "SQ.FT",
+    "defaultRate": 225,
+    "isActive": true
+  },
+  {
+    "order": 20,
+    "nameEn": "Inside - Laminate",
+    "nameGu": "અંદરનું લેમિનેટ",
+    "unit": "SQ.FT",
+    "defaultRate": 20,
+    "isActive": true
+  },
+  {
+    "order": 21,
+    "nameEn": "Kitchen-Basket",
+    "nameGu": "કિચન બાસ્કેટ",
+    "unit": "NOS",
+    "defaultRate": 500,
+    "isActive": true
+  },
+  {
+    "order": 22,
+    "nameEn": "Kitchen-Cupboard",
+    "nameGu": "કિચન કબાટ",
+    "unit": "SQ.FT",
+    "defaultRate": 225,
+    "isActive": true
+  },
+  {
+    "order": 23,
+    "nameEn": "Main Door",
+    "nameGu": "મેઈન ડોર",
+    "unit": "SQ.FT",
+    "defaultRate": 230,
+    "isActive": true
+  },
+  {
+    "order": 24,
+    "nameEn": "Office Table",
+    "nameGu": "ઓફિસ ટેબલ",
+    "unit": "SQ.FT",
+    "defaultRate": 240,
+    "isActive": true
+  },
+  {
+    "order": 25,
+    "nameEn": "Paneling Veneer",
+    "nameGu": "પેનલિંગ વિનિયર",
+    "unit": "SQ.FT",
+    "defaultRate": 250,
+    "isActive": true
+  },
+  {
+    "order": 26,
+    "nameEn": "Penelling – Box Type – Depth 2” To 6”",
+    "nameGu": "પેનલિંગ બોક્સ ટાઈપ (૨\" થી ૬\")",
+    "unit": "SQ.FT",
+    "defaultRate": 225,
+    "isActive": true
+  },
+  {
+    "order": 27,
+    "nameEn": "Penelling – Laminate/Lacquer",
+    "nameGu": "પેનલિંગ - લેમિનેટ / લેકર",
+    "unit": "SQ.FT",
+    "defaultRate": 190,
+    "isActive": true
+  },
+  {
+    "order": 28,
+    "nameEn": "Penelling – Plain/Color",
+    "nameGu": "પેનલિંગ - પ્લેન / કલર",
+    "unit": "SQ.FT",
+    "defaultRate": 175,
+    "isActive": true
+  },
+  {
+    "order": 29,
+    "nameEn": "Safety Door",
+    "nameGu": "સેફ્ટી ડોર",
+    "unit": "SQ.FT",
+    "defaultRate": 230,
+    "isActive": true
+  },
+  {
+    "order": 30,
+    "nameEn": "Side Box – 18” To 24”",
+    "nameGu": "સાઈડ બોક્સ (૧૮\" થી ૨૪\")",
+    "unit": "NOS",
+    "defaultRate": 2750,
+    "isActive": true
+  },
+  {
+    "order": 31,
+    "nameEn": "Side Box – 24” To 30”",
+    "nameGu": "સાઈડ બોક્સ (૨૪\" થી ૩૦\")",
+    "unit": "NOS",
+    "defaultRate": 3500,
+    "isActive": true
+  },
+  {
+    "order": 32,
+    "nameEn": "Single Bed",
+    "nameGu": "સિંગલ બેડ",
+    "unit": "SQ.FT",
+    "defaultRate": 205,
+    "isActive": true
+  },
+  {
+    "order": 33,
+    "nameEn": "Sliding Door",
+    "nameGu": "સ્લાઈડિંગ ડોર",
+    "unit": "R.F",
+    "defaultRate": 195,
+    "isActive": true
+  },
+  {
+    "order": 34,
+    "nameEn": "Staff Table",
+    "nameGu": "સ્ટાફ ટેબલ",
+    "unit": "SQ.FT",
+    "defaultRate": 220,
+    "isActive": true
+  },
+  {
+    "order": 35,
+    "nameEn": "T.V. Unit",
+    "nameGu": "ટી.વી. યુનિટ",
+    "unit": "SQ.FT",
+    "defaultRate": 230,
+    "isActive": true
+  },
+  {
+    "order": 36,
+    "nameEn": "Tandem Box Drawer",
+    "nameGu": "ટેન્ડમ બોક્સ ડ્રોઅર",
+    "unit": "NOS",
+    "defaultRate": 1350,
+    "isActive": true
+  },
+  {
+    "order": 37,
+    "nameEn": "Tendem box Drawer (P/Open)",
+    "nameGu": "ટેન્ડમ બોક્સ ડ્રોઅર (પી/ઓપન)",
+    "unit": "SQ.FT",
+    "defaultRate": 250,
+    "isActive": true
+  },
+  {
+    "order": 38,
+    "nameEn": "Window Kopra (RF)",
+    "nameGu": "બારી કોપરા (R.F)",
+    "unit": "R.F",
+    "defaultRate": 190,
+    "isActive": true
+  },
+  {
+    "order": 39,
+    "nameEn": "Window Kopra Penelling",
+    "nameGu": "બારી કોપરા પેનલિંગ",
+    "unit": "SQ.FT",
+    "defaultRate": 190,
+    "isActive": true
+  },
+  {
+    "order": 40,
+    "nameEn": "Writing Table",
+    "nameGu": "રાઇટિંગ ટેબલ",
+    "unit": "SQ.FT",
+    "defaultRate": 230,
+    "isActive": true
+  }
+]

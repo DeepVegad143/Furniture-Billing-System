@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-navy: #1B2750;
+  --color-cream: #FAF6EE;
+  --color-wood: #B5773A;
+  --color-text: #1F2937;
+  --color-muted: #6B7280;
+}
+
+/* Base Body Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FAF6EE;
+  color: #1F2937;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Gujarati Font Class */
+.font-gu {
+  font-family: 'Noto Sans Gujarati', 'Inter', sans-serif;
+}
+
+/* Mobile-first touch targets */
+button, 
+a, 
+input, 
+select, 
+textarea {
+  touch-action: manipulation;
+}
+
+/* Minimum 16px font on inputs to prevent iOS auto-zoom */
+input, select, textarea {
+  font-size: 16px !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF6EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #B8C6E6;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1B2750;
+}
+
+/* Card hover transitions */
+.app-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px -2px rgba(27, 39, 80, 0.05), 0 2px 6px -1px rgba(27, 39, 80, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Safe area padding for modern iPhones */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 20px);
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
