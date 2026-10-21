@@ -320,7 +320,7 @@ export default function BillDocument({ book, settings, lang = 'en' }) {
                         Timeless Craftsmenship
                       </Text>
                       <Text style={styles.businessPhone}>
-                        Contact: {settings?.phone || '98765 43210'}
+                        Contact: {settings?.phone && settings.phone !== '98765 43210' ? settings.phone : '99799 09987'}
                       </Text>
                     </View>
                   </View>

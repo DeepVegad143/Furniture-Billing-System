@@ -79,6 +79,23 @@ const styles = StyleSheet.create({
     fontSize: 7.5,
     color: '#4B5563',
   },
+  dateContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    marginTop: 2,
+  },
+  dateSpace: {
+    width: 80,
+    marginLeft: 4,
+    minHeight: 11,
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+  },
+  dateUnderline: {
+    borderBottomWidth: 0.7,
+    borderBottomColor: '#9CA3AF',
+  },
   customerBox: {
     backgroundColor: '#F9FAFB',
     borderWidth: 0.8,
@@ -211,8 +228,9 @@ export default function RateQuoteDocument({ quote, customer, settings, lang = 'e
         'We do not take responsibility for laminate issues arising from extreme weather or ballooning.',
       ];
 
-  const custName = customer?.name?.trim() || quote.customerSnapshot?.name?.trim() || '';
-  const custPhone = customer?.phone?.trim() || quote.customerSnapshot?.phone?.trim() || '';
+  const custName = customer?.name?.trim() || quote?.customerSnapshot?.name?.trim() || '';
+  const custPhone = customer?.phone?.trim() || quote?.customerSnapshot?.phone?.trim() || '';
+  const quoteDate = quote?.date?.trim() || '';
 
   return (
     <Document title={`Rate Quote - ${custName || 'Deep Furniture'}`}>
@@ -227,16 +245,23 @@ export default function RateQuoteDocument({ quote, customer, settings, lang = 'e
                 Timeless Craftsmenship
               </Text>
               <Text style={styles.businessPhone}>
-                Contact: {settings?.phone || '98765 43210'}
+                Contact: {settings?.phone && settings.phone !== '98765 43210' ? settings.phone : '99799 09987'}
               </Text>
             </View>
           </View>
 
           <View style={styles.headerRight}>
             <Text style={styles.quoteBadge}>
-              {quote.quoteNumber || 'RATE QUOTATION'}
+              {quote?.quoteNumber || 'RATE QUOTATION'}
             </Text>
-            <Text style={styles.metaText}>Date: {quote.date}</Text>
+            <View style={styles.dateContainer}>
+              <Text style={styles.metaText}>Date:</Text>
+              <View style={[styles.dateSpace, !quoteDate ? styles.dateUnderline : {}]}>
+                <Text style={[styles.metaText, { fontWeight: 'bold' }]}>
+                  {quoteDate}
+                </Text>
+              </View>
+            </View>
           </View>
         </View>
 

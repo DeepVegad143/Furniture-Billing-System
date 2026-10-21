@@ -19,6 +19,9 @@ export async function getSettings(req, res, next) {
     let settings = await Settings.findOne({ ownerId: req.user.id });
     if (!settings) {
       settings = await seedSettingsForUser(req.user.id);
+    } else if (settings.phone === '98765 43210') {
+      settings.phone = '99799 09987';
+      await Settings.updateOne({ _id: settings._id }, { $set: { phone: '99799 09987' } });
     }
     res.json({ success: true, settings });
   } catch (err) {

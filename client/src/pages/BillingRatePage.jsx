@@ -38,7 +38,7 @@ export default function BillingRatePage() {
     phone: '',
   });
 
-  const [quoteDate, setQuoteDate] = useState(new Date().toISOString().split('T')[0]);
+  const [quoteDate, setQuoteDate] = useState('');
   const [generatingPdf, setGeneratingPdf] = useState(false);
   const [sharingWhatsApp, setSharingWhatsApp] = useState(false);
   const [savedSuccessNotice, setSavedSuccessNotice] = useState('');
@@ -66,7 +66,7 @@ export default function BillingRatePage() {
           const qRes = await apiService.getQuoteById(quoteId);
           const q = qRes.data.quote;
           setQuoteItems(q.items);
-          setQuoteDate(q.date);
+          setQuoteDate(q.date || '');
           if (q.customerId) {
             setSelectedCustomerId(q.customerId.toString());
           }
@@ -168,7 +168,8 @@ export default function BillingRatePage() {
       const blob = await asPdf.toBlob();
 
       const custName = (customer?.name || 'Customer').replace(/\s+/g, '_');
-      const filename = `DeepFurniture_Rates_${custName}_${quoteDate}.pdf`;
+      const datePart = quoteDate ? `_${quoteDate}` : '';
+      const filename = `DeepFurniture_Rates_${custName}${datePart}.pdf`;
 
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
@@ -205,7 +206,8 @@ export default function BillingRatePage() {
       const blob = await asPdf.toBlob();
 
       const custName = (customer?.name || 'Customer').replace(/\s+/g, '_');
-      const filename = `DeepFurniture_Rates_${custName}_${quoteDate}.pdf`;
+      const datePart = quoteDate ? `_${quoteDate}` : '';
+      const filename = `DeepFurniture_Rates_${custName}${datePart}.pdf`;
 
       await sharePdfToWhatsApp({
         pdfBlob: blob,
@@ -324,9 +326,20 @@ export default function BillingRatePage() {
 
           {/* Date */}
           <div>
-            <label className="block text-xs font-semibold text-gray-600 mb-1">
-              {t('date')}
-            </label>
+            <div className="flex items-center justify-between mb-1">
+              <label className="block text-xs font-semibold text-gray-600">
+                {t('date')}
+              </label>
+              {quoteDate && (
+                <button
+                  type="button"
+                  onClick={() => setQuoteDate('')}
+                  className="text-[10px] text-wood hover:underline font-semibold"
+                >
+                  Clear
+                </button>
+              )}
+            </div>
             <input
               type="date"
               value={quoteDate}

@@ -9,7 +9,7 @@ const quoteSchema = z.object({
     phone: z.string().default(''),
     address: z.string().default(''),
   }),
-  date: z.string().default(() => new Date().toISOString().split('T')[0]),
+  date: z.string().optional().default(''),
   items: z.array(
     z.object({
       nameEn: z.string().min(1),

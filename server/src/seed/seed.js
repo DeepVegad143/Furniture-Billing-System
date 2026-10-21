@@ -60,7 +60,7 @@ export async function seedSettingsForUser(userId, businessName = 'Deep Furniture
   return await Settings.create({
     ownerId: userId,
     businessName,
-    phone: '98765 43210',
+    phone: '99799 09987',
     address: 'Near Patel Estate, GIDC, Surat, Gujarat',
     gstin: '24AAACD1234E1Z5',
     upiId: 'deepfurniture@upi',

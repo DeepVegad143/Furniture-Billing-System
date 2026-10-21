@@ -45,8 +45,7 @@ const rateQuoteSchema = new mongoose.Schema(
     },
     date: {
       type: String,
-      required: true,
-      default: () => new Date().toISOString().split('T')[0],
+      default: '',
     },
     quoteNumber: {
       type: String,
