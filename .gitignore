@@ -1,32 +1,47 @@
-# Dependencies
+# ==============================================================================
+# Production-Grade .gitignore for MERN Stack (React + Vite, Express + Mongoose)
+# ==============================================================================
+
+# --- Dependencies ---
+# Ignore dependencies in root and all subprojects
 node_modules/
 **/node_modules/
+# Ignore Yarn Plug'n'Play installation cache
 .pnp
 .pnp.js
 
-# Environment & Secrets
+# --- Environment & Secret Variables ---
+# Ignore primary environment file in any directory
 .env
+# Ignore any environment variation (e.g., .env.local, .env.production)
 .env*
 *.env
 **/.env
 **/.env.*
+# Explicitly protect server and client local environments
 server/.env
 client/.env
+# Never ignore public environment templates
 !.env.example
 !**/.env.example
 
-# Sensitive JSON files (Credentials, Service Accounts, API Keys & Tokens)
+# --- Sensitive JSON & Credentials ---
+# Ignore files containing credentials in JSON format
 *credentials*.json
 *credential*.json
+# Ignore secret definitions and token bundles in JSON format
 *secret*.json
 *secrets*.json
+# Ignore Google Cloud and Firebase service account keys
 service-account*.json
 *service_account*.json
 serviceAccountKey*.json
+firebase-adminsdk*.json
 google-services*.json
+# Ignore OAuth client secrets downloaded from cloud consoles
 client_secret*.json
 client_secrets*.json
-firebase-adminsdk*.json
+# Ignore stored authentication tokens, session stores, or API keys
 *token*.json
 *tokens*.json
 *password*.json
@@ -35,29 +50,40 @@ firebase-adminsdk*.json
 *api_key*.json
 private*.json
 
-# Sensitive Local Config Overrides (JSON)
+# --- Local Config Overrides ---
+# Ignore local environment configuration overrides
 local.json
 *.local.json
 config.local.json
 settings.local.json
 
-# Plain text credentials & account notes
+# --- Plain Text Secrets & Certificates ---
+# Ignore any file with password in the name
 *password*
+# Ignore any file with credential in the name
 *credential*
+# Ignore any file with secret in the name
 *secret*
+# Ignore personal notes or password reference files
 Dad's Billing website.txt
+# Ignore cryptographic private and public keys
 *.key
 *.pem
+# Ignore SSL and security certificates
 *.cert
 *.crt
 
-# Local Backups & Data Dumps (Excel, DB & JSON dumps)
+# --- Local Backups, Dumps & Customer Data ---
+# Ignore generated Excel spreadsheet reports and customer backups
 *.xlsx
+# Ignore database backup and temporary dump files
 *.bak
 *.tmp
 *.dump
+# Ignore local SQLite or embedded database storage
 *.sqlite
 *.db
+# Ignore exported customer lists or database snapshots in JSON format
 *backup*.json
 *dump*.json
 *export*.json
@@ -65,36 +91,67 @@ customers*.json
 books*.json
 quotes*.json
 
-# Build outputs
+# --- Build Outputs ---
+# Ignore production frontend bundle builds
 dist/
+**/dist/
 build/
+**/build/
 .dist/
+# Ignore serverless and framework intermediate build artifacts
+.vercel
+.cache/
 
-# Logs
+# --- Logs ---
+# Ignore log directories and general log output files
 logs/
 *.log
+# Ignore package manager error and debug logs
 npm-debug.log*
 yarn-debug.log*
 pnpm-debug.log*
 
-# Editor, OS & System metadata
+# --- Editor, OS & System Metadata ---
+# Ignore macOS Finder metadata files
 .DS_Store
+# Ignore Windows thumbnail and layout metadata
 Thumbs.db
 desktop.ini
+# Ignore Visual Studio Code project workspace settings
 .vscode/
+# Ignore JetBrains IDE project files
 .idea/
+# Ignore file history and temporary editor swap files
 .history/
+*.swp
+*.swo
 
-# MongoDB memory server cache
+# --- Testing & Database Cache ---
+# Ignore MongoDB in-memory binaries and test databases
 .mongodb/
 mongodb-binaries/
+# Ignore test coverage reports
+coverage/
+.nyc_output/
 
-# Explicit Whitelist: Essential project configuration & seed data must NEVER be ignored
+# ==============================================================================
+# Explicit Whitelist: Essential project files must NEVER be ignored
+# ==============================================================================
+# Keep root and subpackage dependency manifests tracked
 !package.json
 !**/package.json
+# Keep lockfiles tracked for deterministic builds
 !package-lock.json
 !**/package-lock.json
+# Keep deployment configuration for Vercel tracked
+!vercel.json
+!**/vercel.json
+# Keep Vite bundler build configuration tracked
+!vite.config.js
+!**/vite.config.js
+# Keep TypeScript compiler configs tracked if added
 !tsconfig*.json
 !**/tsconfig*.json
+# Keep seed data tracked (contains standard catalog & terms, no secrets)
 !server/seed/*.json
 !seed/*.json

@@ -16,8 +16,8 @@ export const env = {
   CLIENT_URL: (process.env.CLIENT_URL || 'http://localhost:5173')
     .split(',')
     .map(url => url.trim().replace(/\/$/, '')),
-  OWNER_USERNAME: process.env.OWNER_USERNAME || 'Dinesh Vegad',
-  OWNER_PASSWORD: process.env.OWNER_PASSWORD || '991299',
+  OWNER_USERNAME: process.env.OWNER_USERNAME || '',
+  OWNER_PASSWORD: process.env.OWNER_PASSWORD || '',
   DEMO_USERNAME: process.env.DEMO_USERNAME || 'demo',
   DEMO_PASSWORD: process.env.DEMO_PASSWORD || 'demo123',
 };
