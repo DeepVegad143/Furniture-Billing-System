@@ -1,9 +1,10 @@
 # Dependencies
 node_modules/
+**/node_modules/
 .pnp
 .pnp.js
 
-# Environment & Sensitive Files
+# Environment & Secrets
 .env
 .env*
 *.env
@@ -11,26 +12,58 @@ node_modules/
 **/.env.*
 server/.env
 client/.env
+!.env.example
+!**/.env.example
+
+# Sensitive JSON files (Credentials, Service Accounts, API Keys & Tokens)
+*credentials*.json
+*credential*.json
+*secret*.json
+*secrets*.json
+service-account*.json
+*service_account*.json
+serviceAccountKey*.json
+google-services*.json
+client_secret*.json
+client_secrets*.json
+firebase-adminsdk*.json
+*token*.json
+*tokens*.json
+*password*.json
+*auth*.json
+*apiKey*.json
+*api_key*.json
+private*.json
+
+# Sensitive Local Config Overrides (JSON)
+local.json
+*.local.json
+config.local.json
+settings.local.json
 
 # Plain text credentials & account notes
 *password*
 *credential*
-*credentials*.json
 *secret*
-service-account*.json
 Dad's Billing website.txt
 *.key
 *.pem
 *.cert
 *.crt
 
-# Local Backups & Data Dumps
+# Local Backups & Data Dumps (Excel, DB & JSON dumps)
 *.xlsx
 *.bak
 *.tmp
 *.dump
 *.sqlite
 *.db
+*backup*.json
+*dump*.json
+*export*.json
+customers*.json
+books*.json
+quotes*.json
 
 # Build outputs
 dist/
@@ -55,3 +88,13 @@ desktop.ini
 # MongoDB memory server cache
 .mongodb/
 mongodb-binaries/
+
+# Explicit Whitelist: Essential project configuration & seed data must NEVER be ignored
+!package.json
+!**/package.json
+!package-lock.json
+!**/package-lock.json
+!tsconfig*.json
+!**/tsconfig*.json
+!server/seed/*.json
+!seed/*.json
