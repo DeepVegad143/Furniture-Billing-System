@@ -84,7 +84,7 @@ cd server
 npm install
 
 # Frontend dependencies
-cd ../client
+cd client
 npm install
 ```
 
